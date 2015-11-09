@@ -1,0 +1,7 @@
+---
+- name: Ensure service
+  service:
+    name: '{{ item }}'
+    state: '{{ nfs_server_service_state }}'
+    enabled: '{{ nfs_server_service_enabled }}'
+  with_items: '{{ nfs_server_service_names }}'

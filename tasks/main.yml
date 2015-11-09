@@ -1,0 +1,15 @@
+---
+- include_vars: '{{ ansible_os_family }}{{ ansible_distribution_major_version }}.yml'
+  tags:
+  - nfs_server_install
+  - nfs_server_config
+  - nfs_server_service
+
+- include: install.yml
+  tags: nfs_server_install
+
+- include: config.yml
+  tags: nfs_server_config
+
+- include: service.yml
+  tags: nfs_server_service

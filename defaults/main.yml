@@ -1,0 +1,7 @@
+---
+nfs_server_package_name: nfs-utils
+nfs_server_package_state: present
+nfs_server_service_state: running
+nfs_server_service_enabled: true
+nfs_server_config_file_name: /etc/exports
+nfs_server_exports: []

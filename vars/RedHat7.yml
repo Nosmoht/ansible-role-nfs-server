@@ -1,0 +1,4 @@
+---
+nfs_server_service_names:
+- rpcbind
+- nfs-server

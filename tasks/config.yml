@@ -1,0 +1,8 @@
+---
+- name: Ensure config
+  lineinfile:
+    name: '{{ nfs_server_config_file_name }}'
+    regexp: '^({{ item.export }})'
+    line: \1 {{ item.export }}{% for host in item.hosts %} {{ host.name }}({{ host.options }}){% endfor %}
+    backrefs: true
+  with_items: nfs_server_exports

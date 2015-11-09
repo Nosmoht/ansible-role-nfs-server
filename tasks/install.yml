@@ -1,0 +1,5 @@
+---
+- name: Ensure package
+  yum:
+    name: '{{ nfs_server_package_name }}'
+    state: '{{ nfs_server_package_state }}'
