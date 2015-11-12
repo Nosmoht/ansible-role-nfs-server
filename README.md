@@ -26,6 +26,9 @@ Ansible
 | nfs_server_exports | List of dictionaries describing NFS exports | [] |
 
 # Usage
+Some tasks of the role require root privileges. Therefore become must be used
+with either sudo or su.
+
 ```yaml
 ---
 - hosts: server
