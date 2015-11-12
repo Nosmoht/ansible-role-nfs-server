@@ -32,6 +32,9 @@ with either sudo or su.
 ```yaml
 ---
 - hosts: server
+  become: true
+  become_method: sudo
+  become_user: root
   vars:
     nfs_server_exports:
     - export: /mnt/nfs-share
